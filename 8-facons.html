@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>8 façons</title>
+<link type="text/css" href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link type="text/css" href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+<link type="text/css" href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		
+
+<header>
+	<h1>8 façons simples d’améliorer la typographie dans vos designs.</h1>
+	
+	<div class="container-id">
+		<div class="container-avatar">
+			<img src="img/avatar.png" alt="avatar" title="Momoa">
+		</div>
+		<div class="container-left">
+			<div class="container-name">
+			Par <a href="http://www.aisleone.net/about/" hreflang="en">Antonio Carusone</a>
+			</div>
+			<div class="container-date">
+				22 janvier 2019 à 12h45
+			</div>
+		</div>
+	</div>
+	<h2>
+	Cet article a été écrit pour publication dans Smashing Magazine le 3 avril 2009. Je le reproduis ici pour vous être agréable.
+	</h2>
+</header>
+
+
+<p>
+Beaucoup de gens, y compris les designers, pensent que la typographie consiste à choisir une police, sa taille et si elle doit être grasse ou pas. Pour la plupart des gens, ça s 'arrête là. Obtenir une bonne typographie demande tellement plus, notamment de s 'attarder sur les détails que les designers négligent souvent.
+</p>
+
+<p>
+Ces détails donnent au designer le contrôle total, leur permettant d 'apporter une typographie belle et cohérente à leurs designs. Bien que ces subtilités puissent être appliquées à différents types de médias, dans cet article nous nous concentrerons sur leur application au design web à travers l 'utilisation des CSS.
+</p>
+ 
+ <h2>Voici donc 8 façons simples d 'améliorer la typographie, et donc l 'ergonomie, de vos designs.</h2>
+
+ <h3>1. Justification</h3>
+
+<p>
+La justification est la longueur d 'une ligne de texte. Pour l 'œil d 'un lecteur, des lignes trop longues ou trop courtes peuvent être fatigantes et gênantes. Une justification longue perturbe le rythme de lecture car le lecteur a du mal à localiser la prochaine ligne de texte. Une justification étroite n 'est acceptable que pour de petites quantités de texte. Pour une lisibilité optimale, vous devriez avoir une justification de 40 à 80 caractères, espaces inclus. Pour un design à une seule colonne, une justification de 65 caractères est considérée comme idéale.
+</p>
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/justification.jpg" alt="image-1" title="bla">
+</div>	
+
+
+<p>
+Une manière simple pour calculer la justification est d 'utiliser la méthode de Robert Bringhurst, qui multiplie la taille de la police par 30. Si la taille de la police est de 10px, la multiplier par 30 vous donne une justification de 300px ou environ 65 caractères par ligne. Le code ressemblerait à quelque chose comme:
+</p>
+
+<div class="blockcode">
+	<ul>
+		<li>P {</li>
+		<li>font-size: 10px;</li>
+		<li>max-width: 300px;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+<h3>2. Interlignage</h3>
+
+<p>
+L 'interlignage est l 'espace entre les lignes du corps de texte qui joue un rôle important dans sa lisibilité. Des lignes correctement espacées permettent au lecteur de mieux cerner la fonte et améliorent l 'apparence globale du texte. L 'interlignage altère aussi la couleur typographique, qui est la densité ou la tonalité d 'une composition.
+</p>
+
+<p>
+Plusieurs facteurs impactent l 'interlignage: police, taille, graisse, casse, justification, intermot de la fonte, etc. Plus la justification est longue, plus l 'interlignage devient nécessaire. À l 'inverse, plus la taille de la fonte augmente, plus l 'interlignage peut être réduit. Une bonne règle est de déterminer un interlignage de 2 à 5 points plus grand que la taille de la fonte, selon la police. Si vous avez une fonte de 12pt, un interlignage de 15 à 16pt devrait bien fonctionner sur le Web.
+</p>
+
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/interlignage.jpg" alt="image-1" title="bla">
+</div>
+
+<p>
+Obtenir le bon espacement demande un peu de finesse, mais voici un exemple de ce à quoi le code pourrait ressembler:
+</p>
+
+<div class="blockcode">
+	<ul>
+		<li>body {</li>
+		<li>  font-family: Helvetica, sans-serif;</li>
+		<li>line-height: 16px;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+
+<h3>3. Ponctuation flottante</h3>
+
+<p>
+Placez les guillemets dans la marge du corps de texte. En ignorant cela, un guillemet aligné avec le texte interrompra la marge gauche et perturbera le rythme du lecteur. Placer les guillemets à l 'extérieur permet de conserver l 'alignement à gauche intact et équilibré, améliorant ainsi la lisibilité.
+</p>
+
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/guillemets.jpg" alt="image-1" title="bla">
+</div>
+
+<p>
+Ce résultat est obtenu très facilement avec CSS en utilisant l 'élément blockquote:
+</p>
+<div class="blockcode">
+	<ul>
+		<li>blockquote {</li>
+		<li>text-indent: -0.8em;</li>
+		<li>font-size: 12px;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+
+<p>
+L 'indentation négative dépendra de la police, de la taille de la fonte et des marges utilisées.
+</p>
+
+<h3>4. Rythme vertical</h3>
+
+<p>
+Une grille de référence est fondamentale pour obtenir un rythme typographique cohérent sur une page. Elle permet au lecteur de suivre facilement le flux du texte, ce qui par la même augmente la lisibilité. Un rythme continu dans la dimension verticale maintient tout le texte sur une grille cohérente, afin que la proportion et l 'équilibre soient conservés dans toute la page, quels que soient la taille de la fonte, l 'interlignage ou la justification.
+</p>
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/rythme-vertical.jpg" alt="image-1" title="bla">
+</div>
+
+<p>
+Pour conserver un rythme vertical en CSS il faut que l 'espacement entre les éléments et l 'interlignage soient égaux à la taille de la grille de référence. Par exemple, disons que vous utilisez une grille de référence de 15px, ce qui signifie qu 'il y a 15px entre chaque ligne de base. L 'interlignage serait de 15px et l 'espace entre chaque paragraphe serait également de 15px. Voici un exemple:
+</p>
+        
+<div class="blockcode">
+	<ul>
+		<li>body {</li>
+		<li>font-family: Helvetica, sans-serif;</li>
+		<li>font-size: 12px;</li>
+		<li>line-height: 15px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>p {</li>
+		<li>bmargin-bottom: 15px;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+
+<p>
+Cela permet à chaque paragraphe de s 'aligner sur la grille et ainsi de conserver le rythme vertical du texte.
+</p>
+
+<h3>5. Veuves et Orphelines</h3>
+
+<p>
+Une veuve est une ligne courte ou un mot unique à la fin d 'un paragraphe. Un orphelin est un mot ou une ligne courte au début ou à la fin d 'une colonne séparée du reste du paragraphe. Les veuves et les orphelines créent des drapeaux inélégants, interrompent l 'œil du lecteur et affectent la lisibilité. Ils peuvent être évités en ajustant la taille de la fonte, l 'interlignage, la justification, l 'intermots, l 'interlettrage ou en entrant manuellement des sauts de ligne.
+</p>
+
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/veuves-orphelins.jpg" alt="image-1" title="bla">
+</div>
+
+
+<p>
+Malheureusement, il n 'existe pas de moyen facile pour empêcher les veuves et orphelines typographiques avec CSS. Une façon de les supprimer a été mentionnée précédemment, mais il existe également un plugin jQuery nommé <a href="http://davecardwell.co.uk/javascript/jquery/plugins/jquery-widont/" hreflang="en" lang="en">jQWidon't</a> qui place un espace insécable entre les deux derniers mots d 'un élément.
+</p>
+
+<i>les propriétés CSS widows et orphans permettraient de remédier à ce problème si elles étaient implémentée pour tout type de media]
+</i>
+
+<h3>6. Emphase</h3>
+
+<p>
+Mettre l 'emphase sur un mot sans interrompre le lecteur est important. L 'italique est généralement considéré comme étant la forme idéale d 'emphase. D 'autres formes d 'emphase communes sont : gras, les capitales, les petites capitales, la taille de la fonte, la couleur, le soulignement ou une police de caractères différente. Essayez de vous limiter à une emphase unique, quelle qu'elle soit. Les combinaisons comme capitales-gras-italique sont perturbantes et ont l 'air gauche.
+</p>
+	
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/emphase.jpg" alt="image-1" title="bla">
+</div>
+
+	
+<p>Voici quelques manières différentes de créer une emphase en CSS:</p>
+
+<div class="blockcode">
+	<ul>
+		<li>span {</li>
+		<li>font-variant: small-caps;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h1 {</li>
+		<li>font-style: italic;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h2 {</li>
+		<li>text-transform: uppercase;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>a {</li>
+		<li>text-decoration: underline;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+
+<p>
+Gardez à l 'esprit que le style font-variant ne fonctionne que si la police choisie supporte la variante small-caps (petites capitales).
+</p>
+
+<h3>7. Échelle</h3>
+<p>
+Composez toujours à partir d 'une échelle, que ce soit l 'échelle traditionnelle développée au 16ème siècle de laquelle nous sommes tous familiers, ou une que vous créez vous-même. Une échelle est importante parce qu 'elle établit une hiérarchie typographique qui améliore la lisibilité et crée une harmonie et cohérence à l 'intérieur du texte.
+</p>
+	
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/echelle.jpg" alt="image-1" title="bla">
+</div>
+
+  
+<h3>Voici un exemple d 'échelle typographique définie en CSS:</h3>
+        
+<div class="blockcode">
+	<ul>
+		<li>h1 {</li>
+		<li>font-size: 48px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h2 {</li>
+		<li>font-size: 36px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h3 {</li>
+		<li>font-size: 24px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h4 {</li>
+		<li>font-size: 21px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h5 {</li>
+		<li>font-size: 18px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>h6 {</li>
+		<li>font-size: 16px;</li>
+		<li>}</li> 
+	</ul>
+	<ul>
+		<li>p {</li>
+		<li>font-size: 14px;</li>
+		<li>}</li> 
+	</ul>
+</div>
+
+
+<h3>8. De beaux drapeaux</h3>
+
+<p>
+Lorsque vous ferrez un bloc de texte, à gauche ou à droite, un texte non justifié, soyez sûr de maintenir le drapeau (le côté inégal) équilibré sans aucuns «trous» inattendus ou formes bizarres. Un mauvais drapeau peut être déstabilisant pour l 'œil et distraire le lecteur. Un bon drapeau est plus «doux», sans lignes trop longues ou trop courtes. Il n 'existe aucun moyen de contrôler cela en CSS, donc pour obtenir un bon drapeau vous devez faire des ajustements manuels sur le bloc de texte.
+</p>
+	
+<div class="image-container">
+	<img src="http://www.pompage.net/IMG/jpg/drapeaux.jpg" alt="image-1" title="bla">
+</div>
+
+<p>
+La césure peut aussi aider à faire des drapeaux propres, mais malheureusement les CSS ne peuvent pas le gérer pour l 'instant. Peut-être dans un avenir proche, allons-nous avoir <a href="#" hreflang="en" lang="en">une certaine mesure de contrôle avec CSS 3</a>. Tout n 'est pas perdu cela dit. Il existe quelques solutions serveur et côté client pour une césure automatique comme <a href="http://yellowgreen.de/phpHyphenator" hreflang="en" lang="en">phpHyphenator</a> et <a href="http://code.google.com/p/hyphenator/" hreflang="en" lang="en">Hyphenator</a> ainsi que <a href="http://yellowgreen.de/soft-hyphenation-generator" hreflang="en" lang="en">des générateurs en ligne</a>.
+</p>
+
+<h3>Ressources supplémentaires</h3>
+
+<p>
+Voici une liste d 'articles et livres sur le même thème pour vous aider avec les détails:
+</p>
+        
+<ul>            
+	<li>
+		<a href="http://www.markboulton.co.uk/journal/comments/five_simple_steps_to_better_typography/" hreflang="en">Five Simple Steps to Better Typography</a>, Mark Boulton
+	</li>            
+	<li>
+		<a href="http://www.markboulton.co.uk/journal/comments/incremental_leading/" hreflang="en">Incremental Leading</a>, Mark Boulton
+	</li>            
+	<li>
+		<a href="http://24ways.org/2006/compose-to-a-vertical-rhythm" hreflang="en">Compose to a Vertical Rhythm</a>, Richard Rutter — 24 Ways
+	</li>            
+	<li>
+		<a href="http://www.alistapart.com/articles/settingtypeontheweb" hreflang="en">Setting Type on the Web to a Baseline Grid</a>, Wilson Minor — A List Apart
+	</li>            
+	<li>
+		<a href="http://dev.opera.com/articles/view/setting-web-type-to-a-baseline-grid/" hreflang="en">Setting Web Type to a Baseline Grid</a>, Craig Grannell — Opera
+	</li>            
+	<li>
+		<a href="http://webtypography.net/" hreflang="en">The Elements of Typographic Style Applied to the Web</a>, Robert Bringhurst
+	</li>            
+	<li>
+		<a href="http://www.alistapart.com/articles/howtosizetextinCSS" hreflang="en">How to Size Text in CSS</a>, Richard Rutter — A List Apart
+	</li>            
+	<li>
+		<a href="http://topfunky.com/baseline-rhythm-calculator/" hreflang="en">Baseline Rhythm Calculator</a>, Geoffrey Grosenbach
+	</li>            
+	<li>
+		<a href="http://www.amazon.com/Detail-Typography-Jost-Hochuli/dp/0907259340" hreflang="en">Detail In Typography</a>, Jost Hochuli
+	</li>            
+	<li>
+		<a href="http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326" hreflang="en">The Elements of Typographic Style</a>, Robert Bringhurst
+	</li>            
+	<li>
+		<a href="http://www.amazon.com/Thinking-Type-Critical-Designers-Students/dp/1568984480" hreflang="en">Thinking with Type</a>, Ellen Lupton
+	</li>            
+	<li>
+		<a href="http://www.amazon.com/Systems-Graphic-Systeme-Visuele-Gestaltung/dp/3721201450" hreflang="en">Grid Systems in Graphic Design</a>, Josef Müller-Brockmann
+	</li>
+</ul>            
+        
+<footer>
+source: http://www.pompage.net/traduction/8-facons-simples-d-ameliorer-la-typographie-dans-vos
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+html, body{
+max-width: 65%;
+ margin: 20px auto;
+ padding: 0;
+ color: #404040;
+ font-size: 100%;
+font-family: 'Mukta', sans-serif;
+ line-height:190%;
+
+}
+body {
+ background-color: #fcfbfb; 
+}
+h1 {
+ font-size: 200%; 
+  line-height:120%;
+
+ }
+header h1{
+font-family: 'Righteous', cursive;
+}
+h2 {
+ font-size: 150%; 
+ }
+p + h2{
+	margin-top: 50px;
+}
+h3 {
+ font-size: 130%;
+ margin: 20px 0 0 0;
+ }
+p{
+margin: 30px 0 0 0;	
+}
+h3 + p{
+	margin-top: 0;
+}
+p,ul,li,td {
+ color: #404040;
+ font-size: 15px;
+ }
+a:link {
+ color: #285eb5;
+ text-decoration: underline;
+ }
+a:visited {
+ color: #610b0b;
+ }
+a:hover {
+ color: #9e2020;
+ text-decoration: none;
+}
+a:active, a:focus {
+ color: red;
+}
+img {
+	width: 100%;
+	margin: 0;
+}
+.image-container + p {
+	margin-top: 0px;
+}
+image-container{
+	width: auto;
+	margin: 0;
+}
+p + .image-container{
+	margin-top: 15px;
+}
+header{
+	padding: 0;
+	border-radius: 3px;
+}
+header p{
+	font-style: italic;	
+}
+table
+{
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+td, th
+{
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+}
+th{
+	color:#ffffff;
+}
+header + p{
+	margin-bottom: 0;
+}
+ul{
+	padding: 0;
+	margin: 5px 0 15px 0;
+	border-radius: 3px;
+}
+ul li{
+	padding: 10px 15px;	
+}
+.blockcode{
+	border: 1px solid #e6e6e6;
+	background-color: #f8f5f5;
+	padding: 10px 20px;
+	margin-top: 10px;
+}
+.blockcode ul{
+	margin: 0;
+	list-style: none;
+	border-radius: 3px;
+	line-height:170%;
+
+}
+.blockcode ul li{
+	padding: 0;
+	color: #1658a9	
+}
+.blockcode ul > li:first-child, .blockcode ul > li:last-child {
+	 padding: 0;
+	 color: #c20f0f
+}
+.container-id{
+	height: 60px;
+	width: 100%;
+	float: left;
+	margin: 15px 0;
+}
+.container-avatar{
+	height: 50px;
+	width: 50px;
+	float: left;
+}
+.container-avatar img {
+	border-radius: 100%;
+	padding: 5px;
+	border: 1px solid #d2cbcb;
+
+}
+.container-left{
+	height: 60px;
+	width: 200px;
+	padding-left: 70px;
+	padding-top: 8px;
+}
+.container-name{
+	height: 20px;
+	width: auto;
+}
+.container-name a{
+	color: #747272;
+}
+.container-date{
+	height: 20px;
+	width: auto;
+	color: #8d8d8d;
+	font-size: 12px;
+
+}
